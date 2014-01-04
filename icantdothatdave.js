@@ -14,7 +14,7 @@ function imSorryDaveImAfraidICantDoThat() {
 
     var text = $(comment).find('span span span').html();
     if (text) {
-      var match = text.match(/he(l+)\syeah.*/i);
+      var match = text.match(/he(l+)\s?yeah.*/i);
 
       // Test if Dave's comment matches what it should
       if (match) {
