@@ -18,7 +18,7 @@ function imSorryDaveImAfraidICantDoThat() {
 
       // Test if Dave's comment matches what it should
       if (match) {
-        var commentId = $(comment).attr('data-reactid').match(/\{comment(\d*_?\d*)\}/)[1];
+        var commentId = $(comment).attr('data-reactid').match(/comment(\d*_?\d*)/)[1];
         var num_ls = match[1].length;
 
         // Log and move on
