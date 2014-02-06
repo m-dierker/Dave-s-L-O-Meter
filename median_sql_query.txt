@@ -1,0 +1,7 @@
+SELECT num_ls FROM
+(SELECT a1.comment_id, a1.num_ls, COUNT(a1.num_ls) Rank
+FROM comments a1, comments a2
+WHERE a1.num_ls < a2.num_ls OR (a1.num_ls=a2.num_ls AND a1.comment_id <= a2.comment_id)
+group by a1.comment_id, a1.num_ls
+order by a1.num_ls desc) a3
+WHERE Rank = (SELECT (COUNT(*)+1) DIV 2 FROM comments);
