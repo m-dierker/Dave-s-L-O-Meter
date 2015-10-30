@@ -6,6 +6,8 @@ $(document).ready(function() {
 });
 
 function imSorryDaveImAfraidICantDoThat() {
+  $('div#u_ps_0_2_1').hide();
+
   // Fetch comments from Dave
   var daveComments = $('li.UFIComment div.UFICommentContent[dave!=true]').has('a.UFICommentActorName[href="https://www.facebook.com/davefontenot"]');
   $.each(daveComments, function(idx, comment) {
